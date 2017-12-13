@@ -8,7 +8,7 @@ namespace BE
 {
     class Employee
     {
-        private string _first_name;
+        private string _first_name { get; set; }
 
     }
 }
