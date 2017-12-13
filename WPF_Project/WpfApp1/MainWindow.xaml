@@ -3,8 +3,34 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:BE="clr-namespace:WpfApp1.Properties"
         xmlns:local="clr-namespace:WpfApp1"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
-    <Grid/>
+        Title="MainWindow" Height="333.6" Width="435">
+    <Grid>
+        <TabControl HorizontalAlignment="Stretch"  VerticalAlignment="Stretch" >
+            <TabItem Header="Search Employee">
+                <Grid>
+                    <TextBlock Text="Enter employee last name:" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="20,20,0,0"/>
+                    <TextBox HorizontalAlignment="Center" VerticalAlignment="Top" Text="" Width="100" Height="20" Margin="20,20,5,0"/>
+                    <Button HorizontalAlignment="Right" VerticalAlignment="Top" Content="search" Width="70" Height="20" Margin="20,20,50,0"/>
+                    <DataGrid VerticalAlignment="Bottom" HorizontalAlignment="Stretch" Height="200"/>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Add Employee">
+                <Grid >
+                    <TextBlock HorizontalAlignment="Left" Margin="35,30,0,0" TextWrapping="Wrap" Text="First Name" VerticalAlignment="Top"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="35,80,0,0" TextWrapping="Wrap" Text="Last Name" VerticalAlignment="Top"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="35,130,0,0" TextWrapping="Wrap" Text="Id" VerticalAlignment="Top"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="35,180,0,0" TextWrapping="Wrap" Text="Education" VerticalAlignment="Top"/>
+                    <TextBox HorizontalAlignment="Left" Height="23" Margin="150,30,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+                    <TextBox HorizontalAlignment="Left" Height="23" Margin="150,80,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+                    <TextBox HorizontalAlignment="Left" Height="23" Margin="150,130,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+                    <ComboBox HorizontalAlignment="Left" Margin="150,180,0,0" VerticalAlignment="Top" Width="120" SelectedItem= " {Binding Education}"/>
+
+                </Grid>
+            </TabItem>
+        </TabControl>
+
+    </Grid>
 </Window>
